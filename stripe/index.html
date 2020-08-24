@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Stripe Checkout Sample</title>
-    <meta name="description" content="A demo of Stripe Payment Intents" />
+    <title>PlantMe Stripe</title>
+    <meta name="description" content="A demo of a possible way to accept Stripe Payment at PlantMe" />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -139,8 +139,8 @@
             mode: 'payment',
             lineItems: [{ price: PRICE_ID, quantity: quantity }],
             successUrl:
-              DOMAIN + "/success.html?session_id={CHECKOUT_SESSION_ID}",
-            cancelUrl: DOMAIN + "/canceled.html"
+              DOMAIN + "/stripe/success.html?session_id={CHECKOUT_SESSION_ID}",
+            cancelUrl: DOMAIN + "/stripe/canceled.html"
           })
           .then(handleResult);
       });
